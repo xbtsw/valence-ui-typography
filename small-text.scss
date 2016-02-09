@@ -1,4 +1,4 @@
-@import 'bower_components/vui-colors/colors.scss';
+@import 'node_modules/vui-colors/colors.scss';
 
 @mixin vui-typography-small-text(
 		$color: $vui-color-ferrite,
@@ -19,7 +19,7 @@
 
 @mixin vui-typography-small-strong-text(
 		$color: $vui-color-ferrite,
-		$fontWeight: 700, 
+		$fontWeight: 700,
 		$margin: 1rem 0 1rem 0
 	) {
 

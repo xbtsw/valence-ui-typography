@@ -11,8 +11,5 @@
     ".npmignore",
     ".travis.yml",
     "package.json"
-  ],
-  "dependencies": {
-    "vui-colors": "^0.2.0"
-  }
+  ]
 }

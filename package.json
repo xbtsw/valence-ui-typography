@@ -9,7 +9,6 @@
     "build:sass:test": "node-sass --output-style expanded ./test/test.scss ./test/test.css",
     "build": "npm run build:sass && npm run build:sass:test",
     "perceptual-diff": "percy snapshot test/",
-    "postinstall": "bower install",
     "pretest": "npm run build",
     "test": "csslint typography.css"
   },
@@ -29,7 +28,10 @@
   },
   "homepage": "https://github.com/Brightspace/valence-ui-typography",
   "dependencies": {
-    "bower": "^1.5.3"
+    "vui-colors": "^0.2.0"
+  },
+  "peerDependencies": {
+    "frau-sass-importer": "^0.3.0"
   },
   "devDependencies": {
     "csslint": "^0.10.0",
