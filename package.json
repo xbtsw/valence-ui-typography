@@ -1,15 +1,15 @@
 {
   "name": "vui-typography",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Mixins and CSS for applying basic typography styles",
   "scripts": {
     "clean": "rimraf *.css && rimraf ./test/*.css",
     "prebuild": "npm run clean",
     "build:sass": "node-sass --importer ./node_modules/frau-sass-importer/ --output-style expanded typography.css.scss typography.css",
     "build:sass:test": "node-sass --importer ./node_modules/frau-sass-importer/ --output-style expanded ./test/test.scss ./test/test.css",
-    "build": "npm run build:sass && npm run build:sass:test",
     "perceptual-diff": "percy snapshot test/",
-    "pretest": "npm run build",
+    "screenshot": "phantomjs ./screenshots/build.js",
+    "pretest": "npm run build && cpy typography.css test",
     "test": "csslint typography.css"
   },
   "repository": {
@@ -36,7 +36,8 @@
   "devDependencies": {
     "frau-sass-importer": "^0.3.0",
     "csslint": "^0.10.0",
-    "node-sass": "^3.1.1",
-    "rimraf": "^2.3.4"
+    "node-sass": "^3.4.2",
+    "phantomjs-prebuilt": "^2.1.4",
+    "rimraf": "^2.5.2"
   }
 }
